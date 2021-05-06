@@ -76,3 +76,23 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+
+# Created by https://www.toptal.com/developers/gitignore/api/phpunit
+# Edit at https://www.toptal.com/developers/gitignore?templates=phpunit
+
+### PHPUnit ###
+# Covers PHPUnit
+# Reference: https://phpunit.de/
+
+# Generated files
+.phpunit.result.cache
+.phpunit.cache
+
+# PHPUnit
+/app/phpunit.xml
+/phpunit.xml
+
+# Build data
+/build/
+
+# End of https://www.toptal.com/developers/gitignore/api/phpunit
