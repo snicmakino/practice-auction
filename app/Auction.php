@@ -25,7 +25,7 @@ class Auction
 
     /**
      * @param string $bidderName
-     * @param $bidPrice
+     * @param int $bidPrice
      * @throws Exception
      */
     public function bid(string $bidderName, int $bidPrice)
@@ -51,6 +51,6 @@ class Auction
 
     public function history()
     {
-        // TODO 履歴を書く
+        return $this->bidHistory->toString();
     }
 }

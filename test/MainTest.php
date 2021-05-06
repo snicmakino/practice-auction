@@ -19,7 +19,7 @@ class MainTest extends TestCase
         $this->assertSame($auction->result(), "次郎 300");
     }
 
-    public function test現在価格より低い金額で入札することが出来ない()
+    public function test_現在価格より低い金額で入札することが出来ない()
     {
         $auction = new Auction("商品A", 100);
         $auction->bid("太郎", 200);
@@ -30,12 +30,12 @@ class MainTest extends TestCase
         }
     }
 
-//    public function test入札履歴を閲覧することができる()
-//    {
-//        $auction = new Auction("商品A", 100);
-//        $auction->bid("太郎", 200);
-//        $auction->bid("次郎", 300);
-//        $auction->bid("たけし", 500);
-//        $this->assertSame($auction->history(), "太郎 200, 次郎 300, たけし 500");
-//    }
+    public function test_入札履歴を閲覧することができる()
+    {
+        $auction = new Auction("商品A", 100);
+        $auction->bid("太郎", 200);
+        $auction->bid("次郎", 300);
+        $auction->bid("たけし", 500);
+        $this->assertSame($auction->history(), "太郎 200,次郎 300,たけし 500");
+    }
 }
