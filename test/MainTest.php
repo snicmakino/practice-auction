@@ -5,13 +5,13 @@ use App\Auction;
 
 class MainTest extends TestCase
 {
-    public function testShuppin()
+    public function test_出品のみで入札なし()
     {
         $auction = new Auction("商品A", 100);
         $this->assertSame($auction->result(), "入札なしでした。");
     }
 
-    public function testShuppinAndBid()
+    public function test_出品と入札結果()
     {
         $auction = new Auction("商品A", 100);
         $auction->bid("太郎", 200);

@@ -46,11 +46,11 @@ class Auction
         }
 
         $latestBid = $this->bidHistory->latestBid();
-        return $latestBid->getName() . " " . $latestBid->getPrice();
+        return $latestBid->__toString();
     }
 
-    public function history()
+    public function history(): string
     {
-        return $this->bidHistory->toString();
+        return (string)$this->bidHistory;
     }
 }

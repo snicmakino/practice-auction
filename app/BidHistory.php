@@ -45,4 +45,9 @@ class BidHistory
     {
         return count($this->bids);
     }
+
+    public function __toString(): string
+    {
+        return implode(',', $this->bids);
+    }
 }

@@ -33,4 +33,12 @@ class Bid
     {
         return $this->price;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString(): string
+    {
+        return $this->getName() . ' ' . $this->getPrice();
+    }
 }
