@@ -4,21 +4,20 @@ namespace App;
 
 use Exception;
 
-class Auction
+class Trade
 {
-    private string $itemName;
+    private string $itemId;
     private int $firstPrice;
-
     private BidHistory $bidHistory;
 
     /**
-     * Auction constructor.
-     * @param string $itemName
+     * Trade constructor.
+     * @param string $itemId
      * @param int $firstPrice
      */
-    public function __construct(string $itemName, int $firstPrice)
+    public function __construct(string $itemId, int $firstPrice)
     {
-        $this->itemName = $itemName;
+        $this->itemId = $itemId;
         $this->firstPrice = $firstPrice;
         $this->bidHistory = new BidHistory();
     }
